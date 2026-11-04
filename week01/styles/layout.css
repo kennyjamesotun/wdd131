@@ -1,10 +1,60 @@
-nav {
-    background-color: rgb(2, 2, 63);
-    padding: 10px;
+/* Reset-ish basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav a {
-    color: white;
-    display: block;
-    padding: 20px;
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* ---- First header: centered title ---- */
+.site-header {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  padding: 1.5rem 1rem;
+  background: #1e293b;
+  color: #fff;
+}
+
+.site-header h1 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+/* ---- Second header: centered nav with separated links ---- */
+.nav-header {
+  display: flex;
+  justify-content: center;   /* center the whole nav */
+  background: #334155;
+  padding: 0.75rem 1rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;                 /* space between menu items */
+  flex-wrap: wrap;           /* wrap on small screens */
+}
+
+.main-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #38bdf8;
+}
+
+/* Optional: vertical divider between items */
+.main-nav a + a {
+  border-left: 1px solid #64748b;
+  padding-left: 2rem;
 }
