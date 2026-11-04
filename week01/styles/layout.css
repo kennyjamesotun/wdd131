@@ -16,7 +16,7 @@ body {
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically */
   padding: 1.5rem 1rem;
-  background: #1e293b;
+  background: #03534f;
   color: #fff;
 }
 
@@ -29,7 +29,7 @@ body {
 .nav-header {
   display: flex;
   justify-content: center;   /* center the whole nav */
-  background: #334155;
+  background: #03534f;
   padding: 0.75rem 1rem;
 }
 
@@ -37,20 +37,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;                 /* space between menu items */
+  gap: 20rem;                 /* space between menu items */
   flex-wrap: wrap;           /* wrap on small screens */
 }
 
 .main-nav a {
   color: #e2e8f0;
-  text-decoration: none;
+  text-decoration: Helvetica, Verdana;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   transition: color 0.2s;
 }
 
 .main-nav a:hover {
-  color: #38bdf8;
+  color: #e9da0c;
 }
 
 /* Optional: vertical divider between items */
