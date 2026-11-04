@@ -6,15 +6,15 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
   line-height: 1.5;
 }
 
-/* ---- First header: centered title ---- */
+/* ---- First header ---- */
 .site-header {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
+  justify-content: start;  
+  align-items: center;    
   padding: 1.5rem 1rem;
   background: #03534f;
   color: #fff;
@@ -22,7 +22,7 @@ body {
 
 .site-header h1 {
   font-size: 1.75rem;
-  text-align: center;
+  text-align: start;
 }
 
 /* ---- Second header: centered nav with separated links ---- */
@@ -35,10 +35,11 @@ body {
 
 .main-nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20rem;                 /* space between menu items */
-  flex-wrap: wrap;           /* wrap on small screens */
+  justify-content: space-between;  /* spread links edge to edge */
+  align-items: space-evenly;
+  width: 80%;
+  max-width: 1000px;               /* keep it tidy on wide screens */
+  margin: 0 auto;
 }
 
 .main-nav a {
@@ -46,15 +47,119 @@ body {
   text-decoration: Helvetica, Verdana;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
+  transition: color 0.2s, text-decoration-color 0.2s;
+
+}
+
+
+.main-nav a:hover {
+  color: #aaf5dc;
+  text-decoration: underline;
+  text-underline-offset: 4px;   /* gap between text and underline */
+  text-decoration-thickness: 2px;
+}
+
+/*sticky site header*/
+.site-header {
+  /* existing styles... */
+  transition: transform 0.3s ease;
+}
+
+/* Applied by JS once you scroll past the first header */
+.site-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* ---- Footer base ---- */
+.site-footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 2.5rem 1rem 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---- Columns ---- */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 300px;
+}
+
+.footer-col h3 {
+  color: #f1f5f9;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-col a {
+  color: #cbd5e1;
+  text-decoration: none;
   transition: color 0.2s;
 }
 
-.main-nav a:hover {
-  color: #e9da0c;
+.footer-col a:hover {
+  color: #5de9e2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Optional: vertical divider between items */
-.main-nav a + a {
-  border-left: 1px solid #64748b;
-  padding-left: 2rem;
+/* ---- Footer note ---- */
+.footer-note {
+  text-align: center;
+  padding-top: 1.25rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-note p {
+  margin: 0.25rem 0;
+}
+
+.footer-note-sub {
+  color: #ffffff;
+}
+
+.footer-note a {
+  color: #5de9e2;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+  }
 }
