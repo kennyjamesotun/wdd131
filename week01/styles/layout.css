@@ -50,24 +50,24 @@ body {
   transition: color 0.2s, text-decoration-color 0.2s;
 
 }
-.main-body {
-  display: grid;
-  grid-template-columns: 2fr 1fr; 
-  flex: 1; /* Pushes the footer to the bottom */
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 208px;
 }
 
-/* Left Column */
-.column-main {
-  background-color: #dd1e1e; 
-  padding: 15px;
-   min-height: 500px;
+.main-content {
+  flex: 2;
+  background-color: #ccc;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Right Column */
-.column-aside {
-  min-height: 500px;
-  padding: 15px;
-  background-color: #ffffff; 
+.aside-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 
