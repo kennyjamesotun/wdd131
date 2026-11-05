@@ -1,0 +1,197 @@
+/* Reset-ish basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  line-height: 1.5;
+}
+
+/* ---- First header ---- */
+.site-header {
+  display: flex;
+  justify-content: start;  
+  align-items: center;    
+  padding: 1.5rem 1rem;
+  background: #03534f;
+  color: #fff;
+}
+
+.site-header h1 {
+  font-size: 1.75rem;
+  text-align: start;
+}
+
+/* ---- Second header: centered nav with separated links ---- */
+.nav-header {
+  display: flex;
+  justify-content: center;   /* center the whole nav */
+  background: #03534f;
+  padding: 0.75rem 1rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;  /* spread links edge to edge */
+  align-items: space-evenly;
+  width: 80%;
+  max-width: 1000px;               /* keep it tidy on wide screens */
+  margin: 0 auto;
+}
+
+.main-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s, text-decoration-color 0.2s;
+
+}
+
+
+.main-nav a:hover {
+  color: #aaf5dc;
+  text-decoration: underline;
+  text-underline-offset: 4px;   /* gap between text and underline */
+  text-decoration-thickness: 2px;
+}
+
+.site-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Layout wrapper ---- */
+.page-main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.two-col {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start; /* columns don't stretch to equal height */
+}
+
+/* ---- Left column: smaller ---- */
+.col-left {
+  flex: 1 1 30%;   /* grow, shrink, base 30% */
+  min-width: 200px;
+  background: #f1f5f9;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+/* ---- Right column: bigger ---- */
+.col-right {
+  flex: 2 1 65%;   /* grow twice as much, base 65% */
+  min-width: 0;    /* prevents overflow with long words/code */
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    flex-direction: column;
+  }
+
+  .col-left,
+  .col-right {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+
+/* ---- Footer base ---- */
+.site-footer {
+  background: #03534f;
+  color: #cbd5e1;
+  padding: 2.5rem 1rem 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---- Columns ---- */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 300px;
+}
+
+.footer-col h3 {
+  color: #f1f5f9;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-col a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #5de9e2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Footer note ---- */
+.footer-note {
+  text-align: center;
+  padding-top: 1.25rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-note p {
+  margin: 0.25rem 0;
+}
+
+.footer-note a {
+  color: #5de9e2;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+  }
+}

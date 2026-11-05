@@ -29,7 +29,7 @@ body {
 .nav-header {
   display: flex;
   justify-content: center;   /* center the whole nav */
-  background: #03534f;
+  background: #000000;
   padding: 0.75rem 1rem;
 }
 
@@ -44,73 +44,31 @@ body {
 
 .main-nav a {
   color: #e2e8f0;
-  text-decoration: Helvetica, Verdana;
+  text-decoration: none;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   transition: color 0.2s, text-decoration-color 0.2s;
 
 }
-
-
-.main-nav a:hover {
-  color: #aaf5dc;
-  text-decoration: underline;
-  text-underline-offset: 4px;   /* gap between text and underline */
-  text-decoration-thickness: 2px;
+.main-body {
+  display: grid;
+  /* This splits the area into two columns: 2 parts left, 1 part right */
+  grid-template-columns: 2fr 1fr; 
+  flex: 1; /* Pushes the footer to the bottom */
 }
 
-.site-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+/* Left Column */
+.column-main {
+  background-color: #d3d3d3; /* The gray background */
+  padding: 15px;
 }
 
-/* ---- Layout wrapper ---- */
-.page-main {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+/* Right Column */
+.column-aside {
+  background-color: #ffffff; /* The white background */
+  padding: 15px;
 }
 
-.two-col {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start; /* columns don't stretch to equal height */
-}
-
-/* ---- Left column: smaller ---- */
-.col-left {
-  flex: 1 1 30%;   /* grow, shrink, base 30% */
-  min-width: 200px;
-  background: #f1f5f9;
-  padding: 1.25rem;
-  border-radius: 8px;
-}
-
-/* ---- Right column: bigger ---- */
-.col-right {
-  flex: 2 1 65%;   /* grow twice as much, base 65% */
-  min-width: 0;    /* prevents overflow with long words/code */
-  background: #ffffff;
-  padding: 1.25rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-@media (max-width: 768px) {
-  .two-col {
-    flex-direction: column;
-  }
-
-  .col-left,
-  .col-right {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-}
 
 
 /* ---- Footer base ---- */
