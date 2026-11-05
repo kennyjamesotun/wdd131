@@ -52,21 +52,22 @@ body {
 }
 .main-body {
   display: grid;
-  /* This splits the area into two columns: 2 parts left, 1 part right */
   grid-template-columns: 2fr 1fr; 
   flex: 1; /* Pushes the footer to the bottom */
 }
 
 /* Left Column */
 .column-main {
-  background-color: #d3d3d3; /* The gray background */
+  background-color: #dd1e1e; 
   padding: 15px;
+   min-height: 500px;
 }
 
 /* Right Column */
 .column-aside {
-  background-color: #ffffff; /* The white background */
+  min-height: 500px;
   padding: 15px;
+  background-color: #ffffff; 
 }
 
 
