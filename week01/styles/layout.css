@@ -53,20 +53,21 @@ body {
 .container {
   display: flex;
   width: 100%;
-  min-height: 208px;
+  margin: 0;
+  min-height: 200px;
 }
 
 .main-content {
   flex: 2;
   background-color: #ccc;
-  padding: 20px;
+  padding: 20px 20px 0;
   box-sizing: border-box;
 }
 
 .aside-content {
   flex: 1;
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 20px 0;
   box-sizing: border-box;
 }
 
