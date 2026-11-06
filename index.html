@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Otunla Kehinde</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Otunla Kehinde Modupe</title>
     <meta name = "description" content="WDD 131 - Dynamic Web Fundamentals.
       Dynamic Web Fundamentals, web development for beginners, HTML, CSS, 
       JavaScript, responsive web design, interactive websites, 
       website development, frontend development, web design fundamentals">
     <meta name ="author" content="Otunla Kehinde">
-    <title>WDD 131 - Dynamic Web Fundamentals - Otunla Kehinde</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Otunla Kehinde Modupe</title>
     <link rel=stylesheet href="styles/base.css">
+    <script src="getdates.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,43 +22,64 @@
   </header>
 
   <header class="nav-header">
-    <nav class="main-nav">
-      <a href="/home">Home</a>
-      <a href="/projects">Projects</a>
-      <a href="/services">Services</a>
-      <a href="/contactus">Contact Us</a>
-    </nav>
-
+       <nav class="main-nav">
+            <a href="https://www.linkedin.com/in/kehinde-otunla-419882121">My Linkedln Profile</a></li>
+            <a href="https://byupw.instructure.com/"> I Learn</a></li>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng&id=p34#p34">Scripture</a></li>
+            <a href="#">Final project</a></li>
+        </nav>
     </header>
-    <main class="page-main">
-      <div class="two-col">
-        <!-- Right column (bigger) -->
-            <section class="col-right">
-             <h2>Main Content</h2>
-             <p>This is the primary content area. It takes up more space than the sidebar.</p>
-             <p>Add articles, product listings, dashboards — whatever the page is about.</p>
-            </section>
+   <main class="main-content">
+  <h1>Otunla Kehinde Modupe</h1>
 
-     <!-- Left column (smaller) -->
-        <aside class="col-left">
-               <h2>Sidebar</h2>
-               <p>Quick links, categories, or secondary info goes here.</p>
-              <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contactus">Contact</a></li>
-              </ul>
-        </aside>
-      </div>
-   </main>
-       
+  <section class="card">
+    <h2>About Me</h2>
+    <div class="card-body">
+      <img class="portrait" src=images/profile.jpg alt="Portrait of Otunla Kehinde" width="145" height="160">
+      <p>My name is Otunla Kehinde Modupe. I am a native of Ijebu, Ogbogbo, Ogun State, Nigeria. I graduated from Lagos State Polytechnic, Ikorodu, Lagos, Nigeria, with an Upper Credit in Computer Engineering.
 
-    <footer class="site-footer">
-    
-        <div class="footer-note">
-          <p>&copy; 2026 My School Project
-        </div>
-    </footer>
+I am currently studying Software Engineering at BYU-Idaho Ensign College, where I am further developing my knowledge and skills in software development, programming, and modern technology.</p>
+
+      <h3>Lagos, Nigeria</h3>
+
+      <figure class="flag">
+        <img src=images/lagos-flag.jpg alt="Flag of my country" width="143">
+        <figcaption>Official Flag of my Country</figcaption>
+      </figure>
+      <p>Lagos is made up of several islands and mainland areas connected by bridges, including the famous Third Mainland Bridge.
+
+Lagos is a vibrant city known for its energy, cultural diversity, business opportunities, and endless possibilities.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Web Dev Resources</h2>
+    <div class="card-body resources">
+      <ul>
+        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+        <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer-note"></div>
+  <p>©2025 🌺 Your Name 🌺 Your Country</p>
+  <p class="modified">Last Modification: <span id="lastModified"></span></p>
+</div>
+</footer>
+<script src="getdates.js"></script>
+
+<footer class="site-footer">
+ 
+    <div class="footer-note">
+      <p>&copy; 2026 My School Project
+    </div>
+</footer>
+
 </body>
 </html>
