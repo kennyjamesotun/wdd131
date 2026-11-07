@@ -29,7 +29,7 @@ body {
 .nav-header {
   display: flex;
   justify-content: center;   /* center the whole nav */
-  background: #e05413;
+  background: #01201b;
   padding: 0.75rem 1rem;
 }
 
